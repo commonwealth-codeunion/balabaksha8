@@ -4,17 +4,17 @@ include $_SERVER['DOCUMENT_ROOT'].'/scripts/phpmailer/Exception.php';
 if($_POST['mail']==true){
 $email=$_POST['mail'];
 }else{
-$email='Отправитель';
+$email='Почта';
 };
-if($_POST['name']==true){
-$name=$_POST['name'];
+if($_POST['gender']==true){
+$gender=$_POST['gender'];
 }else{
-$name='Отправитель';
+$gender='Пол';
 };
-if($_POST['phone']==true){
-$phone=$_POST['phone'];
+if($_POST['age']==true){
+$age=$_POST['age'];
 }else{
-$phone='Телефон';
+$age='Возраст';
 };
 if($_POST['msg']==true){
 $message=$_POST['msg'];
@@ -30,26 +30,26 @@ $mail->SMTPAutoTLS=false;
 $mail->Host='localhost';
 $mail->Port=25;
 $mail->setFrom('yasli-sad_8@mail.ru','Ясли-сад №8');
-$mail->addAddress('maripbekoff@gmail.com');
+$mail->addAddress('c10ver.obj@gmail.com');
 $mail->isHTML(true);
 $mail->Subject='Новая заявка!';
 $mail->Body='<html><body>';
-$mail->Body.='<h1>Новая заявка на ПКО!</h1><br>';
+$mail->Body.='<h1>Пришла новая заявка!</h1><br>';
 $mail->Body.='<table rules="all" style="border-color: #666; max-width: 200px;" cellpadding="10">';
 $mail->Body.="<tr style='background: #eee;'><td>
-                        <strong>Имя:</strong>
-                        </td><td>".strip_tags($name)."</td></tr>";
-$mail->Body.="<tr><td>
                         <strong>Почта:</strong>
                         </td><td>".strip_tags($email)."</td></tr>";
 $mail->Body.="<tr><td>
-                        <strong>Телефон:</strong>
-                        </td><td>".strip_tags($phone)."</td></tr>";
+                        <strong>Пол:</strong>
+                        </td><td>".strip_tags($age)."</td></tr>";
+$mail->Body.="<tr><td>
+                        <strong>Возраст:</strong>
+                        </td><td>".strip_tags($age)."</td></tr>";
 $mail->Body.="<tr><td>
                         <strong>Сообщение:</strong>
                         </td><td>".strip_tags($message)."</td></tr>";
 $mail->Body.="</table>";
 $mail->Body.="</body></html>";
-if($mail->send()){echo "Заявка успешно отправлена, в ближайшее время с вами свяжутся наши специалисты.";}
+if($mail->send()){echo "Заявка успешно отправлена.";}
 else{echo 'Произошла ошибка, попробуйте позже.';}
 ?>
