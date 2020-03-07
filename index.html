@@ -517,10 +517,11 @@
                         $("#form-submit").attr('disabled', 'disabled');
                         $("#form-submit").css('cursor', 'auto');
 
+                        // console.log(formData);
                     },
                     error: function (jqXHR, exception) {
                         console.log(jqXHR)
-                        $("#form-submit").html("Отправляем данные...");
+                        $("#form-submit").html("Произошла ошибка");
                     },
                     success: function (msg) {
                         console.log(msg);
