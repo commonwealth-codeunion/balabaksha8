@@ -25,11 +25,13 @@ $mail=new PHPMailer\PHPMailer\PHPMailer(true);
 $msg="ok";
 $mail->isSMTP();
 $mail->CharSet="UTF-8";
-$mail->SMTPAuth=false;
-$mail->SMTPAutoTLS=false;
-$mail->Host='localhost';
-$mail->Port=25;
-$mail->setFrom('yasli-sad_8@mail.ru','Ясли-сад №8');
+$mail->Host = 'webmail.ps.kz';              
+$mail->Port = 25;                                    
+$mail->SMTPAuth = true;                              
+$mail->Username = 'info@balabaksha8.kz';             
+$mail->Password = 'balabakshaemail12345'; 
+
+$mail->From = 'info@balabaksha8.kz';
 $mail->addAddress('c10ver.obj@gmail.com');
 $mail->isHTML(true);
 $mail->Subject='Новая заявка!';
