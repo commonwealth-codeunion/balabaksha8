@@ -204,16 +204,13 @@ input, select, textarea {
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px !important;
     background-color:  #1d1d1d;
     color: #fff;
+    padding: 20px;
 }
 
-footer p {
-    margin-bottom: 0 !important;
+footer img {
+    margin-right: 40px;
 }
 
 #feedback .btn {
