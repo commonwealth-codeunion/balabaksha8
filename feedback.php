@@ -44,7 +44,7 @@ $mail->isHTML(true);
 $mail->Subject='Новая заявка!';
 $mail->Body='<html><body>';
 $mail->Body.='<h1>Пришла новая заявка!</h1><br>';
-$mail->Body.='<table rules="all" style="border-color: #666; max-width: 200px;" cellpadding="10">';
+$mail->Body.='<table rules="all" style="border-color: #666; max-width: 700px;" cellpadding="10">';
 $mail->Body.="<tr style='background: #eee;'><td>
                         <strong>Почта:</strong>
                         </td><td>".strip_tags($email)."</td></tr>";
