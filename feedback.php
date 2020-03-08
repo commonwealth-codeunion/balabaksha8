@@ -31,6 +31,13 @@ $mail->SMTPAuth = true;
 $mail->Username = 'info@balabaksha8.kz';             
 $mail->Password = 'balabakshaemail12345'; 
 $mail->SMTPDebug = 4;
+$mail->SMTPOptions = array(
+    'ssl' => array(
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true
+    )
+);
 $mail->From = 'info@balabaksha8.kz';
 $mail->addAddress('c10ver.obj@gmail.com');
 $mail->isHTML(true);
