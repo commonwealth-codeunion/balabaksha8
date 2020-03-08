@@ -524,7 +524,8 @@
                     },
                     success: function (msg) {
                         console.log(msg);
-                        $('#form').trigger('reset');
+                        if(msg != "Заявка успешно отправлена.") 
+                            msg = "Произошла ошибка";
                         $('#form-email').css("box-shadow", "none");
                         $('#form-submit').html(msg);
                     }

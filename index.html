@@ -513,7 +513,7 @@
                         $("textarea").css("max-height", $("#form-msg")[0].offsetHeight);
                         $("textarea").css("min-height", $("#form-msg")[0].offsetHeight);
                         $("textarea").attr("readonly", "readonly");
-                        $("#form-submit").html("Отправляем данные...");
+                        $("#form-submit").html("Деректер жіберіліп тұр...");
                         $("#form-submit").attr('disabled', 'disabled');
                         $("#form-submit").css('cursor', 'auto');
 
@@ -525,6 +525,9 @@
                     },
                     success: function (msg) {
                         console.log(msg);
+                        if(msg =="Заявка успешно отправлена.")
+                                msg = "Деректер жіберілді";
+                        else msg = "Жүйеде қате шықты";
                         $('#form-email').css("box-shadow", "none");
                         $('#form-submit').html(msg);
                     }
