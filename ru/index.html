@@ -501,7 +501,7 @@
                 formData.append('gender', $('#form-gender')[0].value);
                 $.ajax({
                     type: "POST",
-                    url: 'feedback.php',
+                    url: '../feedback.php',
                     contentType: false,
                     processData: false,
                     data: formData,
@@ -520,7 +520,7 @@
                     },
                     error: function (jqXHR, exception) {
                         console.log(jqXHR)
-                        $("#form-submit").html("Отправляем данные...");
+                        $("#form-submit").html("Произошла ошибка");
                     },
                     success: function (msg) {
                         console.log(msg);
