@@ -50,7 +50,7 @@ $mail->Body.="<tr style='background: #eee;'><td>
                         </td><td>".strip_tags($email)."</td></tr>";
 $mail->Body.="<tr><td>
                         <strong>Пол:</strong>
-                        </td><td>".strip_tags($age)."</td></tr>";
+                        </td><td>".strip_tags($gender)."</td></tr>";
 $mail->Body.="<tr><td>
                         <strong>Возраст:</strong>
                         </td><td>".strip_tags($age)."</td></tr>";
