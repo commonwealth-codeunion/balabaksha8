@@ -30,7 +30,7 @@ $mail->Port = 25;
 $mail->SMTPAuth = true;                              
 $mail->Username = 'info@balabaksha8.kz';             
 $mail->Password = 'balabakshaemail12345'; 
-
+$mail->SMTPDebug = 2;
 $mail->From = 'info@balabaksha8.kz';
 $mail->addAddress('c10ver.obj@gmail.com');
 $mail->isHTML(true);
