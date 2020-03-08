@@ -25,7 +25,7 @@ $mail=new PHPMailer\PHPMailer\PHPMailer(true);
 $msg="ok";
 $mail->isSMTP();
 $mail->CharSet="UTF-8";
-$mail->Host = 'https://webmail.ps.kz/';              
+$mail->Host = 'mail.balabaksha8.kz';              
 $mail->Port = 25;                                    
 $mail->SMTPAuth = true;                              
 $mail->Username = 'info@balabaksha8.kz';             
